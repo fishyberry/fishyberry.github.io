@@ -78,9 +78,3 @@ body {
 .baguetteBox-button {
     background-color: transparent !important;
 }
-
-@media(max-width: 768px) {
-    body {
-        padding: 0;
-    }
-}

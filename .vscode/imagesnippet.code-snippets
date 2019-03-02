@@ -19,11 +19,7 @@
 	"Image_Snippet": {
         "prefix": "image",
         "body": [
-            "<div class='col-sm-6 col-md-4'>",
-                "<a class='lightbox' href='../resources/images/${1:image}.jpg'>",
-                    "<img src='../resources/images/${1:image}.jpg' alt='${1:image}'>",
-                "</a>",
-			"</div>"
+            "<div class='col-sm-6 col-md-4'> <a class='lightbox' href='../resources/images/${1:image}.jpg'> <img src='../resources/images/${1:image}.jpg' alt='${1:image}'></a></div>"
         ],
         "description": "Adds a new Image"
     }

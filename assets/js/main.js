@@ -1,365 +1,257 @@
 /*
- * Cocoon -  Portfolio html  Template
- * Build Date: december 2017
- * Author: colorlib
- * Copyright (C) 2018 colorlib
- */
- /* ------------------------------------- */
-/*  TABLE OF CONTENTS
- /* ------------------------------------- */
-/*   PRE LOADING                          */
-/*   WOW                                 */
-/*   SIDEBAR Menu                                */
-/*   Portfolio Masonry                         */
-/*   portfolio-filter                    */
-/*   pop up                              */
-/*   OWL CAROUSEL                        */
-/*    MAPS                               */
-/*   COUNTER JS              */
+	Multiverse by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
 
+(function($) {
 
+	skel.breakpoints({
+		xlarge: '(max-width: 1680px)',
+		large: '(max-width: 1280px)',
+		medium: '(max-width: 980px)',
+		small: '(max-width: 736px)',
+		xsmall: '(max-width: 480px)'
+	});
 
-    /* ==============================================
-/*  PRE LOADING
-  =============================================== */
-'use strict';
-$(window).load(function() {
-    $('.loader').delay(500).fadeOut('slow');
-});
+	$(function() {
 
+		var	$window = $(window),
+			$body = $('body'),
+			$wrapper = $('#wrapper');
 
-$(document).ready(function() {
+		// Hack: Enable IE workarounds.
+			if (skel.vars.IEVersion < 12)
+				$body.addClass('ie');
 
-    'use strict';
-    /* ==============================================
-     /*   wow
-      =============================================== */
-    var wow = new WOW(
-        {
-            animateClass: 'animated',
-            offset: 10,
-            mobile: true
-        }
-    );
-    wow.init();
+		// Touch?
+			if (skel.vars.mobile)
+				$body.addClass('touch');
 
-    /* ==============================================
-      Sidebar show and hide
-       =============================================== */
-    $(".menu-btn").on('click',function(i){
-        $("body").toggleClass("sidebar_closed");
-    });
+		// Transitions supported?
+			if (skel.canUse('transition')) {
 
+				// Add (and later, on load, remove) "loading" class.
+					$body.addClass('loading');
 
-    /* --------------------------------------------------------
-     COUNTER JS
-     ----------------------------------------------------------- */
+					$window.on('load', function() {
+						window.setTimeout(function() {
+							$body.removeClass('loading');
+						}, 100);
+					});
 
-    $('.counter').counterUp({
-        delay: 5,
-        time: 3000
-    });
+				// Prevent transitions/animations on resize.
+					var resizeTimeout;
 
+					$window.on('resize', function() {
 
-    /* ==============================================
-     portfolio-filter
-     =============================================== */
+						window.clearTimeout(resizeTimeout);
 
-    // filter items on button click
+						$body.addClass('resizing');
 
-    var $grid = $('.grid').isotope({
-        // set itemSelector so .grid-sizer is not used in layout
-        itemSelector: '.grid-item',
-        percentPosition: true,
-        masonry: {
-            // use element for option
-            columnWidth: '.grid-sizer'
-        }
-    });
+						resizeTimeout = window.setTimeout(function() {
+							$body.removeClass('resizing');
+						}, 100);
 
-    $grid.imagesLoaded().progress( function() {
-        $grid.isotope('layout');
-    });
-    $('#filtr-container').on( 'click', 'li', function(e) {
-        e.preventDefault();
-        $('#filtr-container li').removeClass('active');
-        $(this).closest('li').addClass('active');
-        var filterValue = $(this).attr('data-filter');
-        $grid.isotope({ filter: filterValue });
-    });
+					});
 
-    /* ==============================================
-     pop up
-     =============================================== */
+			}
 
-    // portfolio-pop up
+		// Scroll back to top.
+			$window.scrollTop(0);
 
-    $('.img-container').magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        tLoading: 'Loading image #%curr%...',
-        mainClass: 'mfp-img-mobile',
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-        },
-        image: {
-            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-            titleSrc: function(item) {
-                return item.el.attr('title');
-            }
-        },
-        zoom: {
-            enabled: true,
-            duration: 300, // don't foget to change the duration also in CSS
-            opener: function (element) {
-                return element.find('img');
-            }
-        }
-    });
+		// Fix: Placeholder polyfill.
+			$('form').placeholder();
 
-    /* ==============================================
-     OWL CAROUSEL
-     =============================================== */
-    $('.testimonial_carousel').slick({
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        arrows: false
-    });
+		// Panels.
+			var $panels = $('.panel');
 
+			$panels.each(function() {
 
-    /* ------------------------------------- */
-    /* Animated progress bars
-     /* ------------------------------------- */
-    'use strict';
+				var $this = $(this),
+					$toggles = $('[href="#' + $this.attr('id') + '"]'),
+					$closer = $('<div class="closer" />').appendTo($this);
 
-    var waypoints = $('.progress_container').waypoint(function() {
-        $('.progress .progress-bar').progressbar({
-            transition_delay: 1000
-        });
-    },{
-        offset: '50%'
-    });
+				// Closer.
+					$closer
+						.on('click', function(event) {
+							$this.trigger('---hide');
+						});
 
+				// Events.
+					$this
+						.on('click', function(event) {
+							event.stopPropagation();
+						})
+						.on('---toggle', function() {
 
-        /* --------------------------------------------------------
-    MAPS
-    ----------------------------------------------------------- */
-    var map = $('#map');
-    if(map.length > 0) {
-        google.maps.event.addDomListener(window, 'load', init);
-        var lattuide = map.attr('data-lat');
-        var longtuided = map.attr('data-lon');
-    }
-    function init() {
-        // Basic options for a simple Google Map
-        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-        var mapOptions = {
-            // How zoomed in you want the map to start at (always required)
-            zoom: 16,
-            scrollwheel: false,
-            navigationControl: false,
-            mapTypeControl: false,
-            scaleControl: false,
-            // The latitude and longitude to center the map (always required)
-            center: new google.maps.LatLng(lattuide, longtuided), // New York
+							if ($this.hasClass('active'))
+								$this.triggerHandler('---hide');
+							else
+								$this.triggerHandler('---show');
 
-            // How you would like to style the map.
-            // This is where you would paste any style found on Snazzy Maps.
-            styles: [
-                {
-                    "featureType": "water",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#a3ccff"
-                        },
-                        {
-                            "lightness": 17
-                        }
-                    ]
-                },
-                {
-                    "featureType": "landscape",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#dfdfdf"
-                        },
-                        {
-                            "lightness": 20
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.highway",
-                    "elementType": "geometry.fill",
-                    "stylers": [
-                        {
-                            "color": "#ffffff"
-                        },
-                        {
-                            "lightness": 17
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.highway",
-                    "elementType": "geometry.stroke",
-                    "stylers": [
-                        {
-                            "color": "#ffffff"
-                        },
-                        {
-                            "lightness": 29
-                        },
-                        {
-                            "weight": 0.2
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.arterial",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#ffffff"
-                        },
-                        {
-                            "lightness": 18
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.local",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#ffffff"
-                        },
-                        {
-                            "lightness": 16
-                        }
-                    ]
-                },
-                {
-                    "featureType": "poi",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#f5f5f5"
-                        },
-                        {
-                            "lightness": 21
-                        }
-                    ]
-                },
-                {
-                    "featureType": "poi.park",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#f9ecd4"
-                        },
-                        {
-                            "lightness": 21
-                        }
-                    ]
-                },
-                {
-                    "elementType": "labels.text.stroke",
-                    "stylers": [
-                        {
-                            "visibility": "on"
-                        },
-                        {
-                            "color": "#ffffff"
-                        },
-                        {
-                            "lightness": 16
-                        }
-                    ]
-                },
-                {
-                    "elementType": "labels.text.fill",
-                    "stylers": [
-                        {
-                            "saturation": 36
-                        },
-                        {
-                            "color": "#333333"
-                        },
-                        {
-                            "lightness": 40
-                        }
-                    ]
-                },
-                {
-                    "elementType": "labels.icon",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "transit",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "color": "#f2f2f2"
-                        },
-                        {
-                            "lightness": 19
-                        }
-                    ]
-                },
-                {
-                    "featureType": "administrative",
-                    "elementType": "geometry.fill",
-                    "stylers": [
-                        {
-                            "color": "#fefefe"
-                        },
-                        {
-                            "lightness": 20
-                        }
-                    ]
-                },
-                {
-                    "featureType": "administrative",
-                    "elementType": "geometry.stroke",
-                    "stylers": [
-                        {
-                            "color": "#fefefe"
-                        },
-                        {
-                            "lightness": 17
-                        },
-                        {
-                            "weight": 1.2
-                        }
-                    ]
-                }
-            ]
-        };
+						})
+						.on('---show', function() {
 
-        // Get the HTML DOM element that will contain your map
-        // We are using a div with id="map" seen below in the <body>
-        var mapElement = document.getElementById('map');
+							// Hide other content.
+								if ($body.hasClass('content-active'))
+									$panels.trigger('---hide');
 
-        // Create the Google Map using our element and options defined above
-        var map = new google.maps.Map(mapElement, mapOptions);
+							// Activate content, toggles.
+								$this.addClass('active');
+								$toggles.addClass('active');
 
-        // Let's also add a marker while we're at it
-        var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(lattuide, longtuided),
-            map: map,
-            icon: 'assets/img/map-icon.png',
-            title: 'cocoon!'
-        });
-    }
+							// Activate body.
+								$body.addClass('content-active');
 
-});
+						})
+						.on('---hide', function() {
+
+							// Deactivate content, toggles.
+								$this.removeClass('active');
+								$toggles.removeClass('active');
+
+							// Deactivate body.
+								$body.removeClass('content-active');
+
+						});
+
+				// Toggles.
+					$toggles
+						.removeAttr('href')
+						.css('cursor', 'pointer')
+						.on('click', function(event) {
+
+							event.preventDefault();
+							event.stopPropagation();
+
+							$this.trigger('---toggle');
+
+						});
+
+			});
+
+			// Global events.
+				$body
+					.on('click', function(event) {
+
+						if ($body.hasClass('content-active')) {
+
+							event.preventDefault();
+							event.stopPropagation();
+
+							$panels.trigger('---hide');
+
+						}
+
+					});
+
+				$window
+					.on('keyup', function(event) {
+
+						if (event.keyCode == 27
+						&&	$body.hasClass('content-active')) {
+
+							event.preventDefault();
+							event.stopPropagation();
+
+							$panels.trigger('---hide');
+
+						}
+
+					});
+
+		// Header.
+			var $header = $('#header');
+
+			// Links.
+				$header.find('a').each(function() {
+
+					var $this = $(this),
+						href = $this.attr('href');
+
+					// Internal link? Skip.
+						if (!href
+						||	href.charAt(0) == '#')
+							return;
+
+					// Redirect on click.
+						$this
+							.removeAttr('href')
+							.css('cursor', 'pointer')
+							.on('click', function(event) {
+
+								event.preventDefault();
+								event.stopPropagation();
+
+								window.location.href = href;
+
+							});
+
+				});
+
+		// Footer.
+			var $footer = $('#footer');
+
+			// Copyright.
+			// This basically just moves the copyright line to the end of the *last* sibling of its current parent
+			// when the "medium" breakpoint activates, and moves it back when it deactivates.
+				$footer.find('.copyright').each(function() {
+
+					var $this = $(this),
+						$parent = $this.parent(),
+						$lastParent = $parent.parent().children().last();
+
+					skel
+						.on('+medium', function() {
+							$this.appendTo($lastParent);
+						})
+						.on('-medium', function() {
+							$this.appendTo($parent);
+						});
+
+				});
+
+		// Main.
+			var $main = $('#main');
+
+			// Thumbs.
+				$main.children('.thumb').each(function() {
+
+					var	$this = $(this),
+						$image = $this.find('.image'), $image_img = $image.children('img'),
+						x;
+
+					// No image? Bail.
+						if ($image.length == 0)
+							return;
+
+					// Image.
+					// This sets the background of the "image" <span> to the image pointed to by its child
+					// <img> (which is then hidden). Gives us way more flexibility.
+
+						// Set background.
+							$image.css('background-image', 'url(' + $image_img.attr('src') + ')');
+
+						// Set background position.
+							if (x = $image_img.data('position'))
+								$image.css('background-position', x);
+
+						// Hide original img.
+							$image_img.hide();
+
+					// Hack: IE<11 doesn't support pointer-events, which means clicks to our image never
+					// land as they're blocked by the thumbnail's caption overlay gradient. This just forces
+					// the click through to the image.
+						if (skel.vars.IEVersion < 11)
+							$this
+								.css('cursor', 'pointer')
+								.on('click', function() {
+									$image.trigger('click');
+								});
+
+				});
+
+	});
+
+})(jQuery);

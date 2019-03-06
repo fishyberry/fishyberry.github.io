@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Image Gallery">
+    <meta name="keywords" content="Cocoon , Portfolio">
+    <meta name="author" content="Pharaohlab">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- ========== Title ========== -->
+    <title> Image Gallery </title>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
+</head>
+
+<body>
+    <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\002.png" data-index="8" />
+    <noscript><img src="assets\img\Screenshots\Apex Legends\002.png" data-index="8" /></noscript>
+
+    <img src="assets\img\Screenshots\Apex Legends\001.png" />
+    <img class="lozad" src="assets\img\Screenshots\Apex Legends\002.png" />
+    <img class="lozad" src="assets\img\Screenshots\Apex Legends\003.png" />
+    <img class="lozad" src="assets\img\Screenshots\Apex Legends\004.png" />
+    <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\005.png" />
+    <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\006.png" />
+    <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\007.png" />
+    <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\008.png" />
+    <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\009.png" />
+</body>
+
+
+<script type="text/javascript">
+    console.log("entered");
+    const observer = lozad('.lozad',
+    {
+        load: function(){
+            console.log('loaded');
+        }
+    });
+    
+    observer.observe();
+</script>
+
+</html>

@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Image Gallery">
+    <meta name="keywords" content="Cocoon , Portfolio">
+    <meta name="author" content="Pharaohlab">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- ========== Title ========== -->
+    <title> Image Gallery </title>
+    <!-- ========== Favicon Ico ========== -->
+    <!--<link rel="icon" href="fav.ico">-->
+    <!-- ========== STYLESHEETS ========== -->
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts Icon CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/et-line.css" rel="stylesheet">
+    <link href="assets/css/ionicons.min.css" rel="stylesheet">
+    <!-- Carousel CSS -->
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <!-- Magnific-popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    <script type="text/javascript">
+        const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+        observer.observe();
+
+    </script>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader-outter"></div>
+        <div class="loader-inner"></div>
+    </div>
+
+    <div class="body-container container-fluid">
+        <a class="menu-btn" href="javascript:void(0)">
+            <i class="ion ion-grid"></i>
+        </a>
+        <div class="row justify-content-center">
+            <!--=================== side menu ====================-->
+            <div class="col-lg-2 col-md-3 col-12 menu_block">
+
+                <!--logo -->
+                <div class="logo_box">
+                    <a href="#">
+                        <img class="lozad" data-src="assets/img/logo.png" alt="cocoon">
+                    </a>
+                </div>
+                <!--logo end-->
+
+                <!--main menu -->
+                <div class="side_menu_section">
+                    <ul class="menu_nav">
+                        <li class="active">
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="portfolio.html">
+                                Portfolio
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--main menu end -->
+
+                <!--filter menu -->
+                <div class="side_menu_section">
+                    <h4 class="side_title">filter by:</h4>
+                    <ul id="filtr-container" class="filter_nav">
+                        <li data-filter="*" class="active"><a href="javascript:void(0)">all</a></li>
+                        <li data-filter=".ApexLegends"> <a href="javascript: void(0)">Apex Legends</a></li>
+                        <li data-filter=".AssassinsCreedRevelations"> <a href="javascript: void(0)">Assassin's Creed
+                                Revelations</a></li>
+                        <li data-filter=".Battlefield3"> <a href="javascript: void(0)">Battlefield 3</a></li>
+                        <li data-filter=".BioShockRemastered"> <a href="javascript: void(0)">BioShock Remastered</a>
+                        </li>
+                        <li data-filter=".BlackMesa"> <a href="javascript: void(0)">Black Mesa</a></li>
+                        <li data-filter=".CastleCrashers"> <a href="javascript: void(0)">Castle Crashers</a></li>
+                        <li data-filter=".CrimzonClover"> <a href="javascript: void(0)">Crimzon Clover</a></li>
+                        <li data-filter=".DarkSoulsIII"> <a href="javascript: void(0)">Dark Souls III</a></li>
+                        <li data-filter=".DarkstarOne"> <a href="javascript: void(0)">Darkstar One</a></li>
+                        <li data-filter=".DeadSpace"> <a href="javascript: void(0)">Dead Space</a></li>
+                        <li data-filter=".Desktop"> <a href="javascript: void(0)">Desktop</a></li>
+                        <li data-filter=".DragonAgeOrigins"> <a href="javascript: void(0)">Dragon Age Origins</a></li>
+                        <li data-filter=".DriverSanFrancisco"> <a href="javascript: void(0)">Driver San Francisco</a>
+                        </li>
+                        <li data-filter=".Dwarfs"> <a href="javascript: void(0)">Dwarfs</a></li>
+                        <li data-filter=".FinalFantasyXIVARealmReborn"> <a href="javascript: void(0)">Final Fantasy XIV
+                                A Realm Reborn</a></li>
+                        <li data-filter=".GoatSimulator"> <a href="javascript: void(0)">Goat Simulator</a></li>
+                        <li data-filter=".Gothic3"> <a href="javascript: void(0)">Gothic 3</a></li>
+                        <li data-filter=".hydropc.exe"> <a href="javascript: void(0)">hydropc.exe</a></li>
+                        <li data-filter=".Inside"> <a href="javascript: void(0)">Inside</a></li>
+                        <li data-filter=".Jotun"> <a href="javascript: void(0)">Jotun</a></li>
+                        <li data-filter=".MedalofHonor"> <a href="javascript: void(0)">Medal of Honor</a></li>
+                        <li data-filter=".Middle-EarthShadowofMordor"> <a href="javascript: void(0)">Middle-Earth Shadow
+                                of Mordor</a></li>
+                        <li data-filter=".MonsterHunterWorld"> <a href="javascript: void(0)">Monster Hunter World</a>
+                        </li>
+                        <li data-filter=".Nuzlocke"> <a href="javascript: void(0)">Nuzlocke</a></li>
+                        <li data-filter=".OperationFlashpointRedRiver"> <a href="javascript: void(0)">Operation
+                                Flashpoint Red River</a></li>
+                        <li data-filter=".Overlord"> <a href="javascript: void(0)">Overlord</a></li>
+                        <li data-filter=".RiseoftheArgonauts"> <a href="javascript: void(0)">Rise of the Argonauts</a>
+                        </li>
+                        <li data-filter=".Risen2DarkWaters"> <a href="javascript: void(0)">Risen 2 Dark Waters</a></li>
+                        <li data-filter=".RyseSonofRome"> <a href="javascript: void(0)">Ryse Son of Rome</a></li>
+                        <li data-filter=".Saboteur"> <a href="javascript: void(0)">Saboteur</a></li>
+                        <li data-filter=".SacredCitadel"> <a href="javascript: void(0)">Sacred Citadel</a></li>
+                        <li data-filter=".SniperElite2"> <a href="javascript: void(0)">Sniper Elite 2</a></li>
+                        <li data-filter=".StyxMasterofShadows"> <a href="javascript: void(0)">Styx Master of Shadows</a>
+                        </li>
+                        <li data-filter=".TheCrew"> <a href="javascript: void(0)">The Crew</a></li>
+                        <li data-filter=".TheWitcher"> <a href="javascript: void(0)">The Witcher</a></li>
+                        <li data-filter=".TheWitness"> <a href="javascript: void(0)">The Witness</a></li>
+                        <li data-filter=".Theturingtest"> <a href="javascript: void(0)">Theturingtest</a></li>
+                        <li data-filter=".TotalWarWARHAMMER"> <a href="javascript: void(0)">Total War WARHAMMER</a></li>
+                        <li data-filter=".Transistor"> <a href="javascript: void(0)">Transistor</a></li>
+                        <li data-filter=".Trine2"> <a href="javascript: void(0)">Trine 2</a></li>
+                        <li data-filter=".XCOM2"> <a href="javascript: void(0)">XCOM 2</a></li>
+                    </ul>
+                </div>
+                <!--filter menu end -->
+            </div>
+            <!--=================== side menu end====================-->
+
+            <!--=================== content body ====================-->
+            <div class="col-lg-10 col-md-9 col-12 body_block  align-content-center">
+                <div class="portfolio">
+                    <div class="container-fluid">
+                        <!--=================== masaonry portfolio start====================-->
+                        <div class="grid img-container justify-content-center no-gutters">
+                            <div class="grid-sizer col-sm-12 col-md-6 col-lg-3"></div>
+
+                            <div class="grid-item col-sm-2 ApexLegends"><a
+                                    href="assets\img\Screenshots\Apex Legends\001.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\001.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 ApexLegends"><a
+                                    href="assets\img\Screenshots\Apex Legends\002.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\002.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 ApexLegends"><a
+                                    href="assets\img\Screenshots\Apex Legends\003.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\003.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 ApexLegends"><a
+                                    href="assets\img\Screenshots\Apex Legends\004.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\004.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 ApexLegends"><a
+                                    href="assets\img\Screenshots\Apex Legends\005.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\005.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 ApexLegends"><a
+                                    href="assets\img\Screenshots\Apex Legends\006.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\006.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 ApexLegends"><a
+                                    href="assets\img\Screenshots\Apex Legends\007.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\007.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 ApexLegends"><a
+                                    href="assets\img\Screenshots\Apex Legends\008.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\008.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 ApexLegends"><a
+                                    href="assets\img\Screenshots\Apex Legends\009.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\009.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 ApexLegends"><a
+                                    href="assets\img\Screenshots\Apex Legends\010.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\010.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 ApexLegends"><a
+                                    href="assets\img\Screenshots\Apex Legends\011.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\011.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 ApexLegends"><a
+                                    href="assets\img\Screenshots\Apex Legends\012.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\012.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 ApexLegends"><a
+                                    href="assets\img\Screenshots\Apex Legends\013.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\013.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 ApexLegends"><a
+                                    href="assets\img\Screenshots\Apex Legends\014.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\014.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 ApexLegends"><a
+                                    href="assets\img\Screenshots\Apex Legends\015.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\015.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 ApexLegends"><a
+                                    href="assets\img\Screenshots\Apex Legends\016.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\016.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 ApexLegends"><a
+                                    href="assets\img\Screenshots\Apex Legends\017.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\017.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 ApexLegends"><a
+                                    href="assets\img\Screenshots\Apex Legends\018.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\018.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 ApexLegends"><a
+                                    href="assets\img\Screenshots\Apex Legends\019.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\019.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 ApexLegends"><a
+                                    href="assets\img\Screenshots\Apex Legends\020.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\020.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 ApexLegends"><a
+                                    href="assets\img\Screenshots\Apex Legends\021.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\021.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 ApexLegends"><a
+                                    href="assets\img\Screenshots\Apex Legends\022.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Apex Legends\022.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 AssassinsCreedRevelations"><a
+                                    href="assets\img\Screenshots\Assassin's Creed  Revelations\001.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\Assassin's Creed  Revelations\001.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 AssassinsCreedRevelations"><a
+                                    href="assets\img\Screenshots\Assassin's Creed  Revelations\002.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\Assassin's Creed  Revelations\002.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 AssassinsCreedRevelations"><a
+                                    href="assets\img\Screenshots\Assassin's Creed  Revelations\003.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\Assassin's Creed  Revelations\003.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 AssassinsCreedRevelations"><a
+                                    href="assets\img\Screenshots\Assassin's Creed  Revelations\004.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\Assassin's Creed  Revelations\004.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 AssassinsCreedRevelations"><a
+                                    href="assets\img\Screenshots\Assassin's Creed  Revelations\005.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\Assassin's Creed  Revelations\005.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 AssassinsCreedRevelations"><a
+                                    href="assets\img\Screenshots\Assassin's Creed  Revelations\006.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\Assassin's Creed  Revelations\006.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 AssassinsCreedRevelations"><a
+                                    href="assets\img\Screenshots\Assassin's Creed  Revelations\007.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\Assassin's Creed  Revelations\007.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 AssassinsCreedRevelations"><a
+                                    href="assets\img\Screenshots\Assassin's Creed  Revelations\008.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\Assassin's Creed  Revelations\008.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 AssassinsCreedRevelations"><a
+                                    href="assets\img\Screenshots\Assassin's Creed  Revelations\009.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\Assassin's Creed  Revelations\009.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 AssassinsCreedRevelations"><a
+                                    href="assets\img\Screenshots\Assassin's Creed  Revelations\010.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\Assassin's Creed  Revelations\010.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 AssassinsCreedRevelations"><a
+                                    href="assets\img\Screenshots\Assassin's Creed  Revelations\011.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\Assassin's Creed  Revelations\011.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Battlefield3"><a
+                                    href="assets\img\Screenshots\Battlefield 3\001.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Battlefield 3\001.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\001.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\001.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\002.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\002.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\003.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\003.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\004.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\004.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\005.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\005.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\006.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\006.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\007.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\007.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\008.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\008.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\009.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\009.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\010.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\010.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\011.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\011.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\012.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\012.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\013.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\013.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\014.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\014.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\015.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\015.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\016.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\016.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\017.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\017.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\018.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\018.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\019.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\019.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\020.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\020.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\021.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\021.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\022.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\022.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\023.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\023.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\024.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\024.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\025.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\025.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\026.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\026.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\027.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\027.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\028.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\028.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\029.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\029.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\030.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\030.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\031.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\031.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\032.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\032.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\033.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\033.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\034.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\034.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\035.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\035.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\036.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\036.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\037.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\037.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\038.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\038.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\039.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\039.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\040.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\040.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\041.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\041.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\042.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\042.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\043.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\043.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\044.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\044.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\045.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\045.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BioShockRemastered"><a
+                                    href="assets\img\Screenshots\BioShock Remastered\046.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad"
+                                            data-src="assets\img\Screenshots\BioShock Remastered\046.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BlackMesa"><a
+                                    href="assets\img\Screenshots\Black Mesa\001.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Black Mesa\001.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BlackMesa"><a
+                                    href="assets\img\Screenshots\Black Mesa\002.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Black Mesa\002.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BlackMesa"><a
+                                    href="assets\img\Screenshots\Black Mesa\003.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Black Mesa\003.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BlackMesa"><a
+                                    href="assets\img\Screenshots\Black Mesa\004.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Black Mesa\004.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BlackMesa"><a
+                                    href="assets\img\Screenshots\Black Mesa\005.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Black Mesa\005.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BlackMesa"><a
+                                    href="assets\img\Screenshots\Black Mesa\006.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Black Mesa\006.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BlackMesa"><a
+                                    href="assets\img\Screenshots\Black Mesa\007.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Black Mesa\007.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BlackMesa"><a
+                                    href="assets\img\Screenshots\Black Mesa\008.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Black Mesa\008.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BlackMesa"><a
+                                    href="assets\img\Screenshots\Black Mesa\009.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Black Mesa\009.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BlackMesa"><a
+                                    href="assets\img\Screenshots\Black Mesa\010.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Black Mesa\010.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BlackMesa"><a
+                                    href="assets\img\Screenshots\Black Mesa\011.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Black Mesa\011.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BlackMesa"><a
+                                    href="assets\img\Screenshots\Black Mesa\012.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Black Mesa\012.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BlackMesa"><a
+                                    href="assets\img\Screenshots\Black Mesa\013.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Black Mesa\013.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BlackMesa"><a
+                                    href="assets\img\Screenshots\Black Mesa\014.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Black Mesa\014.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BlackMesa"><a
+                                    href="assets\img\Screenshots\Black Mesa\015.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Black Mesa\015.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BlackMesa"><a
+                                    href="assets\img\Screenshots\Black Mesa\016.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Black Mesa\016.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 BlackMesa"><a
+                                    href="assets\img\Screenshots\Black Mesa\017.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Black Mesa\017.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 CastleCrashers"><a
+                                    href="assets\img\Screenshots\Castle Crashers\001.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Castle Crashers\001.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 CrimzonClover"><a
+                                    href="assets\img\Screenshots\Crimzon Clover\001.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Crimzon Clover\001.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 CrimzonClover"><a
+                                    href="assets\img\Screenshots\Crimzon Clover\002.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Crimzon Clover\002.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 CrimzonClover"><a
+                                    href="assets\img\Screenshots\Crimzon Clover\003.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Crimzon Clover\003.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 CrimzonClover"><a
+                                    href="assets\img\Screenshots\Crimzon Clover\004.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Crimzon Clover\004.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 CrimzonClover"><a
+                                    href="assets\img\Screenshots\Crimzon Clover\005.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Crimzon Clover\005.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\001.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\001.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\002.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\002.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\003.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\003.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\004.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\004.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\005.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\005.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\006.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\006.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\007.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\007.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\008.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\008.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\009.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\009.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\010.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\010.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\011.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\011.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\012.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\012.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\013.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\013.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\014.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\014.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\015.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\015.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\016.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\016.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\017.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\017.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\018.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\018.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\019.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\019.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\020.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\020.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\021.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\021.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\022.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\022.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\023.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\023.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\024.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\024.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\025.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\025.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\026.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\026.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\027.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\027.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\028.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\028.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\029.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\029.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\030.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\030.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\031.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\031.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\032.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\032.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\033.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\033.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\034.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\034.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\035.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\035.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\036.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\036.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\037.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\037.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\038.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\038.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\039.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\039.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\040.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\040.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\041.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\041.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\042.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\042.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\043.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\043.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\044.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\044.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\045.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\045.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\046.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\046.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\047.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\047.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\048.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\048.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkSoulsIII"><a
+                                    href="assets\img\Screenshots\Dark Souls III\049.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dark Souls III\049.png">
+                                    </div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkstarOne"><a
+                                    href="assets\img\Screenshots\Darkstar One\001.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Darkstar One\001.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkstarOne"><a
+                                    href="assets\img\Screenshots\Darkstar One\002.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Darkstar One\002.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DarkstarOne"><a
+                                    href="assets\img\Screenshots\Darkstar One\003.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Darkstar One\003.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\001.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\001.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\002.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\002.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\003.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\003.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\004.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\004.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\005.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\005.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\006.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\006.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\007.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\007.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\008.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\008.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\009.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\009.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\010.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\010.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\011.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\011.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\012.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\012.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\013.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\013.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\014.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\014.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\015.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\015.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\016.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\016.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\017.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\017.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\018.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\018.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\019.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\019.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\020.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\020.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\021.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\021.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\022.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\022.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\023.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\023.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\024.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\024.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\025.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\025.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\026.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\026.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\027.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\027.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\028.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\028.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\029.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\029.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\030.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\030.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\031.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\031.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\032.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\032.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\033.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\033.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\034.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\034.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\035.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\035.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\036.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\036.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\037.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\037.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\038.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\038.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 DeadSpace"><a
+                                    href="assets\img\Screenshots\Dead Space\039.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Dead Space\039.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\001.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\001.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\002.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\002.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\003.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\003.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\004.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\004.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\005.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\005.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\006.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\006.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\007.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\007.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\008.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\008.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\009.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\009.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\010.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\010.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\011.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\011.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\012.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\012.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\013.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\013.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\014.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\014.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\015.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\015.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\016.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\016.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\017.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\017.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\018.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\018.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\019.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\019.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\020.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\020.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\021.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\021.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\022.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\022.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\023.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\023.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\024.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\024.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\025.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\025.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\026.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\026.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\027.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\027.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\028.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\028.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\029.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\029.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\030.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\030.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\031.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\031.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\032.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\032.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\033.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\033.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\034.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\034.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\035.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\035.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\036.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\036.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\037.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\037.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\038.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\038.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\039.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\039.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\040.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\040.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\041.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\041.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\042.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\042.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\043.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\043.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\044.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\044.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\045.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\045.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\046.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\046.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\047.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\047.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\048.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\048.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\049.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\049.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\050.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\050.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\051.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\051.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\052.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\052.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\053.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\053.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\054.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\054.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\055.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\055.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\056.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\056.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\057.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\057.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\058.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\058.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\059.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\059.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\060.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\060.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\061.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\061.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\062.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\062.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\063.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\063.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\064.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\064.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\065.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\065.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\066.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\066.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\067.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\067.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\068.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\068.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\069.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\069.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\070.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\070.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\071.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\071.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\072.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\072.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\073.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\073.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\074.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\074.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\075.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\075.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\076.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\076.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\077.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\077.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\078.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\078.png"></div>
+                                </a></div>
+                            <div class="grid-item col-sm-2 Desktop"><a href="assets\img\Screenshots\Desktop\079.png">
+                                    <div class="project_box_one">
+                                        <img class="lozad" data-src="assets\img\Screenshots\Desktop\079.png"></div>
+                                </a></div>
+                        </div>
+                        <!--=================== masaonry portfolio end====================-->
+                    </div>
+                </div>
+            </div>
+            <!--=================== content body end ====================-->
+        </div>
+    </div>
+
+
+    <!-- jquery -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <!--slick carousel -->
+    <script src="assets/js/slick.min.js"></script>
+    <!--Portfolio Filter-->
+    <script src="assets/js/imgloaded.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <!-- Magnific-popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!--Counter-->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- WOW JS -->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- Custom js -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
